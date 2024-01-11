@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load static %}
+<style>
+    .form-control
+    {
+    margin-bottom:8px;
+    }
+
+</style>
+{% block content %}
+<div class="col-sm-12">
+<div class="row">
+    <div class="h2 text-center" style="color:#3e2723;">Contact Us <i class="fa fa-phone"></i></div>
+    <div class="col-sm-1"></div>
+    <div class="col-sm-10" style="background:#795548;">
+        <div class="row">
+             <div class="col-sm-5 p-4 text-light">
+                 <form method="post">
+                     {% csrf_token %}
+                     {% if s %}
+                     <div class="alert alert-success">
+                         Thanks for enquery...
+                     </div>
+                     {% endif%}
+                 Name<input type="text" placeholder="Enter Your Name.." class="form-control" name="name"/>
+                 Email<input type="text" placeholder="Enter Your Email.." class="form-control" name="email"/>
+                  Mobile<input type="text" placeholder="Enter Your mobileno.." class="form-control" name="mobile"/>
+                     Address<textarea class="form-control" name="address"></textarea>
+                   Message<textarea class="form-control" name="msg"></textarea>
+                 <input type="submit" value="Save" class=" btn btn-danger mt-3">
+                 </form>
+             </div>
+             <div class="col-sm-7 p-4">
+                 <img src="{% static 'images/contact.jpg' %}" style="height:400px; width:700px; margin-left:100px;"/>
+             </div>
+        </div>
+    </div>
+    <div class="col-sm-1"></div>
+</div>
+</div>
+{% endblock %}

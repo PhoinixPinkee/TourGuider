@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="row py-3">
+    <div class="h3 text-center pt-4 pb-4"><u>Image gallery</u><i class="fa fa-picture-o"></i></div>
+            <!-- start image section -->
+            {% if gallery %}
+            {% for x in gallery %}
+    <div class="col-sm-3">
+        <div class="card w-100">
+  <img src="/{{x.picture}}" class="card-img-top" alt="..." style="height:300px;">
+  </div>
+</div>
+            {% endfor %}
+            {% endif %}
+    </div>
+{% endblock %}

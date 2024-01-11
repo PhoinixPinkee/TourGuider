@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="h2 text-center pt-4">Our Guider</div>
+<div class="row">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-10">
+        <div class="row">
+            <div class="col-sm-10">
+                <div class="row">
+                    {% if guider %}
+                    {% for x in guider %}
+                    <div class="col-sm-3">
+                        <div class="card w-100">
+                            <img src="/{{x.guiderpic}}" class="card-img-top" alt="..." style="height:250px;">
+                            <div class="card-body">
+                                <h5 class="card-title">{{x.city}}</h5>
+                                <p class="card-text">
+                                    <b>Guider Id</b> : {{x.gid}}<br/>
+                                    <b>Guider Id Proof</b> : {{x.gidp}}<br/>
+                                    <b>Guider Name</b> : {{x.name}}<br/>
+                                    <b>Qualification</b> : {{x.qualification}}<br/>
+                                    <b>Mobile</b> : {{x.mobile}}<br/>
+                                    <b>Address</b> : {{x.address}}<br/>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                    {% endif %}
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <ul class="list-group">
+                    <li class="list-group-item active bg-warning h3 text-dark" aria-current="true">|| city ||</li>
+                    {% if city %}
+                    {% for x in city %}
+                    <a href="/user/guiderdetails?abc={{x.id}}">
+                        <li class="list-group-item fs-5">{{x.cname}}</li>
+                    </a>
+                    {% endfor %}
+                    {% endif %}
+                    <a href="/user/guiderdetails" style="text-decoration:none;">
+                        <li class="list-group-item fs-5">ALL CITY GUIDER</li>
+                    </a>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-1"></div>
+</div>
+
+
+{% endblock %}

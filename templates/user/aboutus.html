@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="col-sm-12">
+    <div class="row">
+        <div class="col-sm-4"></div>
+            <div class="col-sm-4 ps-5">
+                <img src="{% static 'images/delhi1.jpg' %}" style="height:70px; width:330px;"/>
+        </div>
+        <div class="col-sm-4"></div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6 p-5">
+            <h3><u>About Us-</u></h3>
+            <p style="font-size:20px; font-family:Apple Chancery,cursive;">Delhi Tourism, a government undertaking facilitating tourism since 1975 will
+take you to a guided tour of the Delhi through this website which explores the
+wonders of this city be it its heritage, the art and crafts, the diverse cuisine
+and culture.
+A symbol of the country’s rich past and thriving present, Delhi is a city where
+ancient and modern blend seamlessly together. It is a place that not only touches
+your pulse but even fastens it to a frenetic speed. Home to millions of dreams,
+the city takes on unprecedented responsibilities of realizing dreams bringing people
+ closer and inspiring their thoughts.
+Just a century ago, the British moved the seat of their empire from Kolkata
+ to Delhi. And it has been the Capital of India ever since. Now a thriving,
+ cosmopolitan metro, the city has much to celebrate as it has already reached
+ the milestone of completing 100 years as a Capital. With a history that goes
+ back many centuries, Delhi showcases an ancient culture and a rapidly modernising
+ country. Dotted with monuments there is much to discover here. The seat of many
+ powerful empires in the past, its long history can be traced in its many
+ carefully-preserved monuments, ancient forts and tombs.</p>
+        </div>
+        <div class="col-sm-6 p-5">
+            <img src="{% static 'images/map.jpg'%}" style="height:500px; width:800px;"/>
+        </div>
+    </div>
+</div>
+{% endblock %}
